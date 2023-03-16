@@ -71,7 +71,7 @@ Require: Install BurpSuite (PROFESSIONAL/COMMUNITY EDITION), Mobile Device conne
   - Open terminal in the directory where the certificate has been saved and then run `openssl x509 -inform DER -in cacert.der -out cacert.pem` to change its format.
   - Now we need to get the issuer hash value of the certificate, you can obtain this information with this commnad: `openssl x509 -inform PEM -subject_hash_old -in cacert.pem`.
   - Let’s assume the output of the previous command is `9a5ba575`, now you have to rename the certificate to this value and add .0 extension: `mv cacert.pem 9a5ba575.0`.
- - Step 3: Move certificate info system certificates.
+- Step 3: Move certificate info system certificates.
   - Trusted Certificate Authorities are stored in `/system/etc/security/cacerts` on the Android system.
   - Start your Android Emulator with `-writable-system` flag. I recommend to use `API version < 29` of the emulator system due to issues with write permission to `/system` : `emulator -avd VirtualDeviceName -writable-system`
   - Restart adb as root: `adb root`
