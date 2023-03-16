@@ -40,3 +40,25 @@ Require: Install BurpSuite (PROFESSIONAL/COMMUNITY EDITION), Mobile Device conne
   - Open the browser on your iOS device and go to an HTTPS web page.
   - The page should load without any security warnings. You should see the corresponding requests within BurpSuite.
 ## II. Android physical device.
+- Step 1: The same with IOS
+- Step 2: Configure your device to use the proxy
+  - In your Android device, go to Settings > Network & internet.
+  - Select Internet and long-press the name of your Wi-Fi network.
+  - Select Modify.
+  - From the Advanced options menu, select Proxy > Manual.
+  - Set Proxy hostname to the IP of the computer running BurpSuite.
+  - Set Proxy port to the port value that you configured for the Burp Proxy listener, in this example 8082.
+  - Touch Save.
+- Step 3: Install a CA certificate on your Android device
+  - In order to interact with HTTPS traffic, you need to install a CA certificate from BurpSuite on your Android device. This step is complicated and it varies across devices and versions of Android.
+  - In addition, you need to make further configuration changes in order to proxy HTTPS traffic from a Chrome browser that's at version 99 or above.
+  - For further information on how to perform these steps, you can refer to the following external links. Please note that we're not responsible for the content of these pages:
+    - https://blog.ropnop.com/configuring-burp-suite-with-android-nougat
+    - https://httptoolkit.com/blog/chrome-android-certificate-transparency
+- Step 4: Test the configuration
+  - Open Burp Suite Professional.
+  - Go to Proxy > Intercept and click Intercept is off to switch intercept on.
+  - Open the browser on your Android device and go to an HTTPS web page.
+  - The page should load without any security warnings. You should see the corresponding requests within Burp Suite Professional.
+## III. Android emulator:
+- Step 1: 
