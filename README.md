@@ -1,6 +1,6 @@
 # Capture Requests From Mobile Using Burp Suite
 Require: Install BurpSuite (PROFESSIONAL/COMMUNITY EDITION), Mobile Device connect in the same LAN with PC
-I. IOS physical device:
+## I. IOS physical device:
 - Step 1: Configure the BurpSuite Proxy listener
   - Open BurpSuite then click Settings to open the Settings dialog.
   - ![image](https://user-images.githubusercontent.com/58378623/225493773-faee54d3-5ac8-43f6-aa25-ed1dd45e1beb.png)
@@ -39,4 +39,4 @@ I. IOS physical device:
   - Go to Proxy > Intercept and click Intercept is off to switch intercept on.
   - Open the browser on your iOS device and go to an HTTPS web page.
   - The page should load without any security warnings. You should see the corresponding requests within BurpSuite.
-II. Android physical device.
+## II. Android physical device.
